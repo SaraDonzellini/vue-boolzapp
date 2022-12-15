@@ -16,14 +16,29 @@
           <div class="row">
             <div class="col-12">
               <div class="box d-flex">
-                <div class="box-contacts">
-                  <header class="contacts-header"></header>
+                <div class="box-contacts d-flex flex-column">
+                  <header class="contacts-header d-flex align-items-center justify-content-between">
+                    <div class="avatar d-flex align-items-center">
+                      <img src="./img/avatar_io.jpg" alt="">
+                      <p class="name p-0 m-0">Sofia</p>
+                    </div>
+                    <div class="icons-contacts d-flex justify-content-around">
+                      <i class="fa-solid fa-circle-notch fa-2x p-2"></i>
+                      <i class="fa-solid fa-message fa-2x p-2"></i>
+                      <i class="fa-solid fa-ellipsis-vertical fa-2x p-2 me-3"></i>
+                    </div>
+                  </header>
+                  <div class="notifications">
+                    <i class="fa-solid fa-bell-slash"></i>
+                  </div>
                 </div>
-                <div class="box-messages">
-                  <header class="messages-header"></header>
-                  <footer class="messages-footer">
-                    
-                    <input type="text" name="" id="" placeholder="Scrivi un messaggio">
+                <div class="box-messages d-flex flex-column justify-content-between">
+                  <header class="messages-header">
+                  </header>
+                  <footer class="messages-footer d-flex justify-content-evenly align-items-center">
+                    <i class="fa-regular fa-face-smile fa-2x"></i>
+                    <input class="input-message" type="text" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone fa-2x"></i>
                   </footer>
                 </div>
 

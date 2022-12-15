@@ -23,7 +23,7 @@
 }
 
 .contacts-header,
-.messages-header{
+.messages-header {
   display: flex;
   justify-content: space-between;
   height: 5rem;
@@ -31,6 +31,28 @@
 }
 
 .messages-header,
-.box-messages{
-  border-left: 1px solid #b2b2b2;
+.messages-footer {
+  border-left: 0.5px solid #d6d6d6;
+}
+
+.contacts-header .avatar img{
+  height: 4rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.icons-contacts {
+  color: #b1b1b1;
+  
+}
+
+.messages-footer {
+  height: 5rem;
+  background-color: #f3eeea;
+}
+
+.messages-footer input {
+  height: 60%;
+  width: 80%;
 }
