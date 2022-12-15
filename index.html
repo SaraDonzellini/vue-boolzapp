@@ -59,14 +59,16 @@
                         <i class="fa-solid fa-ellipsis-vertical fa-2x p-2 me-3"></i>
                       </div>
                     </header>
-                    <main class="messages-main" v-for="contact, index in contacts" :class="(index === activeIndex) ? 'my_display' : 'd-none'">
-                      <div class="message" v-for="child, index in contact.messages" :class="(child.status === sent) ? 'sent' : 'received'">{{ child.message }} 
-                        <!-- <br><span class="little-grey">{{ child.date }}</span> -->
+                    <main class="messages-main" v-for="contact, index in contacts" 
+                    :class="(index === activeIndex) ? 'my_display' : 'd-none'">
+                      <div class="message" v-for="child, index in contact.messages" 
+                      :class="(child.status === 'sent') ? 'sent' : 'received'">{{ child.message }} 
+                        <br><span class="little-grey">{{ child.date }}</span>
                       </div>
                     </main>
                     <footer class="messages-footer d-flex justify-content-evenly align-items-center">
                       <i class="fa-regular fa-face-smile fa-2x"></i>
-                      <input class="input-message" type="text" placeholder="Scrivi un messaggio">
+                      <input class="input-message" type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage()">
                       <i class="fa-solid fa-microphone fa-2x"></i>
                     </footer>
                   </div>
