@@ -41,8 +41,8 @@
                       <input type="search" placeholder="Cerca o inizia nuova chat">
                     </div>
                     <div class="contacts">
-                      <div class="contact" v-for="contact in contacts">
-                        <img :src=`./img/avatar${contact.avatar}.jpg` alt=""> {{ contact.name }}
+                      <div class="contact" :class="(index === activeIndex) ? 'active' : ''" v-for="contact, index in contacts">
+                        <img :src=`./img/avatar${contact.avatar}.jpg` :alt="contact.name"> {{ contact.name }}
                       </div>
   
                     </div>
@@ -50,6 +50,9 @@
                   <div class="box-messages d-flex flex-column justify-content-between">
                     <header class="messages-header">
                     </header>
+                    <main class="messages-main" v-for="item, index in contacts">
+                      <div class="message" :class="">{{ item.messages }}</div>
+                    </main>
                     <footer class="messages-footer d-flex justify-content-evenly align-items-center">
                       <i class="fa-regular fa-face-smile fa-2x"></i>
                       <input class="input-message" type="text" placeholder="Scrivi un messaggio">

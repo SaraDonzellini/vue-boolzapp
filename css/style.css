@@ -102,3 +102,13 @@
 .active {
   background-color: #e9ebeb;
 }
+
+.sent {
+  background-color: #d5f9ba;
+  border-radius: 4px;
+}
+
+.received {
+  background-color: #ffffff;
+  border-radius: 4px;
+}
