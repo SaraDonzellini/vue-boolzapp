@@ -1,0 +1,36 @@
+.main-wrapper {
+  height: 100vh;
+  background-color: #d9dbd4;
+}
+
+.wrapper {
+  height: 10vh;
+  background-color: #009688;
+}
+
+.box-contacts {
+  height: 90vh;
+  width: 35%;
+  background-color: white;
+  margin-top: 5vh;
+}
+
+.box-messages {
+  height: 90vh;
+  width: 65%;
+  background-image: url(../img/mine.jpg);
+  margin-top: 5vh;
+}
+
+.contacts-header,
+.messages-header{
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  background-color: #eaeaea;
+}
+
+.messages-header,
+.box-messages{
+  border-left: 1px solid #b2b2b2;
+}
