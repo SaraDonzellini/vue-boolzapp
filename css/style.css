@@ -83,3 +83,22 @@
   height: 60%;
   width: 80%;
 }
+
+.contacts .contact {
+  height: 5rem;
+  /* background-color: #13ff02; */
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #f7f7f7;
+}
+
+.contact img {
+  height: 4rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.active {
+  background-color: #e9ebeb;
+}
