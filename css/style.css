@@ -47,6 +47,33 @@
   
 }
 
+.notifications {
+  background-color: #8edafc;
+  height: 6rem;
+}
+
+.notifications i{
+  color: #8edafc;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  
+}
+
+.notifications .box a{
+  color: #6d7b84;
+  font-size: 0.8rem;
+}
+
+.search{
+  height: 3rem;
+  background-color: #fafafa;
+}
+
+.search input {
+  width: 96%;
+}
+
 .messages-footer {
   height: 5rem;
   background-color: #f3eeea;
