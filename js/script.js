@@ -175,6 +175,10 @@ createApp({
   methods: {
     changeContact(index){
       this.activeIndex = index;
+    },
+    filterArray(){
+      this.contacts.filter(messages)
+      console.log(messages)
     }
   }
 }).mount('#app')

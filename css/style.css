@@ -114,10 +114,17 @@
   background-color: #d5f9ba;
   border-radius: 4px;
   width: 40%;
+  margin-left: 25rem;
 }
 
 .received {
   background-color: #ffffff;
   border-radius: 4px;
   width: 40%;
+  margin-left: 3rem;
+}
+
+.little-grey {
+  font-size: 0.8rem;
+  color:#bac2d7;
 }

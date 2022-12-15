@@ -60,7 +60,9 @@
                       </div>
                     </header>
                     <main class="messages-main" v-for="contact, index in contacts" :class="(index === activeIndex) ? 'my_display' : 'd-none'">
-                      <div class="message" >{{ contact.messages }}</div>
+                      <div class="message" v-for="child, index in contact.messages" :class="(child.status === sent) ? 'sent' : 'received'">{{ child.message }} 
+                        <!-- <br><span class="little-grey">{{ child.date }}</span> -->
+                      </div>
                     </main>
                     <footer class="messages-footer d-flex justify-content-evenly align-items-center">
                       <i class="fa-regular fa-face-smile fa-2x"></i>
