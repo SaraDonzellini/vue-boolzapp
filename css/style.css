@@ -42,7 +42,8 @@
   margin-right: 0.5rem;
 }
 
-.icons-contacts {
+.icons-contacts,
+.icons-messages {
   color: #b1b1b1;
   
 }
@@ -106,9 +107,11 @@
 .sent {
   background-color: #d5f9ba;
   border-radius: 4px;
+  width: 40%;
 }
 
 .received {
   background-color: #ffffff;
   border-radius: 4px;
+  width: 40%;
 }

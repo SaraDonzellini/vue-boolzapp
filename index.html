@@ -41,17 +41,25 @@
                       <input type="search" placeholder="Cerca o inizia nuova chat">
                     </div>
                     <div class="contacts">
-                      <div class="contact" :class="(index === activeIndex) ? 'active' : ''" v-for="contact, index in contacts">
+                      <div class="contact" :class="(index === activeIndex) ? 'active' : ''" v-for="contact, index in contacts" @click="changeContact(index)">
                         <img :src=`./img/avatar${contact.avatar}.jpg` :alt="contact.name"> {{ contact.name }}
                       </div>
   
                     </div>
                   </div>
                   <div class="box-messages d-flex flex-column justify-content-between">
-                    <header class="messages-header">
+                    <header class="messages-header d-flex justify-content-between align-items-center">
+                      <div class="messages-core">
+                        
+                      </div>
+                      <div class="icons-messages d-flex justify-content-around">
+                        <i class="fa-solid fa-magnifying-glass fa-2x p-2"></i>
+                        <i class="fa-solid fa-paperclip fa-2x p-2"></i>
+                        <i class="fa-solid fa-ellipsis-vertical fa-2x p-2 me-3"></i>
+                      </div>
                     </header>
-                    <main class="messages-main" v-for="item, index in contacts">
-                      <div class="message" :class="">{{ item.messages }}</div>
+                    <main class="messages-main" v-for="(value, key) in contacts.messages" >
+                      <div class="message" >{{ value.message }}</div>
                     </main>
                     <footer class="messages-footer d-flex justify-content-evenly align-items-center">
                       <i class="fa-regular fa-face-smile fa-2x"></i>
