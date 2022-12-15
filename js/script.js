@@ -170,19 +170,30 @@ createApp({
       ]
 
     }
-    
+
 
   },
   methods: {
-    changeContact(index){
+    changeContact(index) {
       this.activeIndex = index;
     },
-    sendMessage(){
-      let newObject = 
+    sendMessage() {
+      let newObject = {
+        name: this.activeIndex,
+        avatar: this.activeIndex,
+        visible: this.activeIndex,
+        messages: [
+          {
+            date: Date,
+            message: this.newMessage,
+            status: 'sent'
+          }
+        ],
+      }
       this.contacts.push(newObject);
       this.newMessage = '';
-      
+
     }
-    
+
   }
 }).mount('#app')
