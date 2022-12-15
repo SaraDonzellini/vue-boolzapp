@@ -93,15 +93,21 @@
   border-top: 1px solid #f7f7f7;
 }
 
-.contact img {
+.contact img,
+.contact-avatar img {
   height: 4rem;
   border-radius: 50%;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
+
 .active {
   background-color: #e9ebeb;
+}
+
+.my_display {
+  display: inline-block;
 }
 
 .sent {
