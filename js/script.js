@@ -177,14 +177,14 @@ createApp({
     changeContact(index) {
       this.activeIndex = index;
     },
-    sendMessage() {
+    sendMessage(activeIndex) {
       let newObject = {
-        name: this.activeIndex,
-        avatar: this.activeIndex,
-        visible: this.activeIndex,
+        name: activeIndex,
+        avatar: activeIndex,
+        visible: true,
         messages: [
           {
-            date: Date,
+            date: "10/01/2020 17:15:00",
             message: this.newMessage,
             status: 'sent'
           }
@@ -192,7 +192,7 @@ createApp({
       }
       this.contacts.push(newObject);
       this.newMessage = '';
-
+      console.log(this.contacts)
     }
 
   }

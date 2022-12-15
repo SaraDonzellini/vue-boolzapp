@@ -68,7 +68,7 @@
                     </main>
                     <footer class="messages-footer d-flex justify-content-evenly align-items-center">
                       <i class="fa-regular fa-face-smile fa-2x"></i>
-                      <input class="input-message" type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage()">
+                      <input class="input-message" v-model.trim="newMessage" type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage(activeIndex)">
                       <i class="fa-solid fa-microphone fa-2x"></i>
                     </footer>
                   </div>
