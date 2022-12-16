@@ -203,9 +203,16 @@ createApp({
       }, 1000);
     },
 
-    filterContacts(){
-      console.log(this.search)
-      
+    filterContacts(search){
+      for (let i = 0; i < this.contacts.length; i++) {
+        const element = this.contacts[i];
+        if (element.name.contains = search) {
+          element.visible = true
+        } else {
+          element.visible = false
+        }
+      }
+
     }
 
   },
