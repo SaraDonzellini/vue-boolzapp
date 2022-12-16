@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      today: new Date(),
       newMessage: '',
       activeIndex: 0,
       contacts: [
@@ -177,23 +178,18 @@ createApp({
     changeContact(index) {
       this.activeIndex = index;
     },
-    sendMessage(activeIndex) {
+    sendMessage() {
       let newObject = {
-        name: activeIndex,
-        avatar: activeIndex,
-        visible: true,
-        messages: [
-          {
-            date: "10/01/2020 17:15:00",
-            message: this.newMessage,
-            status: 'sent'
-          }
-        ],
+        date: this.today,
+        message: this.newMessage,
+        status: 'sent'
       }
-      this.contacts.push(newObject);
+
+      this.contacts.messages.push(newObject);
       this.newMessage = '';
       console.log(this.contacts)
-    }
+    },
+
 
   }
 }).mount('#app')
