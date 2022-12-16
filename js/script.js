@@ -187,9 +187,8 @@ createApp({
       }
       this.contacts[this.activeIndex].messages.push(newObj);
       this.newMessage = '';
-
-
     },
+
     sendMessage() {
       let newObj = {
         date: this.today,
@@ -202,8 +201,16 @@ createApp({
       setTimeout(() => {
         this.receiveMessage()
       }, 1000);
-
     },
-    
+
+    filterContacts(){
+      console.log(this.search)
+      
+    }
+
   },
+  created(){
+    
+  }
+
 }).mount('#app')

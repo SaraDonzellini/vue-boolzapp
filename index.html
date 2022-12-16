@@ -60,6 +60,7 @@
                         type="search"
                         placeholder="Cerca o inizia nuova chat"
                         v-model.trim="search"
+                        @keyup.enter="filterContacts()"
                       />
                     </div>
                     <div class="contacts">
