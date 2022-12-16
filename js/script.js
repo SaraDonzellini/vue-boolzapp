@@ -210,7 +210,7 @@ createApp({
     filterContacts() {
       for (let i = 0; i < this.contacts.length; i++) {
         const element = this.contacts[i];
-        if (element.name.contains == this.search) {
+        if (element.name.toLowerCase().includes(this.search.toLowerCase())) {
           element.visible = true
         } else {
           element.visible = false
