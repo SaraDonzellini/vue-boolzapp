@@ -129,8 +129,27 @@
   padding: 1rem 0.5rem;
 }
 
+.sent,
+.received {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.sent:hover,
+.received:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} 
+
+
 .little-grey {
   font-size: 0.8rem;
   color: #bac2d7;
   text-align: end;
 }
+
+.delete-message-box {
+  height: 3rem;
+  width: 180px;
+  background-color: white;
+  padding: 1rem
+}
+

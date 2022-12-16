@@ -103,15 +103,19 @@
                       :class="(index === activeIndex) ? 'my_display' : 'd-none'"
                     >
                       <div
-                        class="message"
+                        class="message dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
                         v-for="child, index in contact.messages"
                         :class="(child.status === 'sent') ? 'sent' : 'received'"
+                        @click=""
                       >
                         {{ child.message }} <br />
                         <span class="little-grey"
                           >{{ child.date }}</span
                         >
                       </div>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#" @click="deleteMessage()">Cancella Messaggio</a></li>
+                      <!-- <div class="delete-message-box d-none"><p class="p-0 m-0" @click="deleteMessage()">Cancella Messaggio</p></div> -->
                     </main>
                     <footer
                       class="messages-footer d-flex justify-content-evenly align-items-center"

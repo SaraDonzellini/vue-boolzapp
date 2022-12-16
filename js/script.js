@@ -216,6 +216,10 @@ createApp({
           element.visible = false
         }
       }
+    },
+
+    deleteMessage(){
+      this.contacts[this.activeIndex].messages.splice(this.message, 1)
     }
 
   }
