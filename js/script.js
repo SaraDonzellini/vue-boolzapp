@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      search:'',
       today: new Date().toLocaleString(),
       newMessage: '',
       activeIndex: 0,
@@ -203,7 +204,6 @@ createApp({
       }, 1000);
 
     },
-
-
-  }
+    
+  },
 }).mount('#app')
