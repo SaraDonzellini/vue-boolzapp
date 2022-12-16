@@ -59,15 +59,15 @@
                       <input
                         type="search"
                         placeholder="Cerca o inizia nuova chat"
-                        v-model.trim="search" 
+                        v-model.trim="search"
                         @keyup.enter="filterContacts()"
-                        
                       />
                     </div>
                     <div class="contacts">
                       <div
                         class="contact"
                         :class="(index === activeIndex) ? 'active' : ''"
+                        :class="filterContacts() == contact.visible ? '' : 'd-none'"
                         v-for="contact, index in contacts"
                         @click="changeContact(index)"
                       >
