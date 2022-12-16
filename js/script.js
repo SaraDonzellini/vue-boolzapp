@@ -179,13 +179,7 @@ createApp({
       this.activeIndex = index;
     },
     sendMessage() {
-      let newObject = {
-        date: this.today,
-        message: this.newMessage,
-        status: 'sent'
-      }
-
-      this.contacts.messages.push(newObject);
+      this.contacts[index].messages.push(newMessage);
       this.newMessage = '';
       console.log(this.contacts)
     },
