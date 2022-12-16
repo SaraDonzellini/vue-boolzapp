@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      search:'',
+      search: '',
       today: new Date().toLocaleString(),
       newMessage: '',
       activeIndex: 0,
@@ -190,34 +190,34 @@ createApp({
     },
 
     sendMessage() {
-      let newObj = {
-        date: this.today,
-        message: this.newMessage,
-        status: 'sent'
-      }
-      this.contacts[this.activeIndex].messages.push(newObj);
-      this.newMessage = '';
+      if (this.newMessage != '') {
 
-      setTimeout(() => {
-        this.receiveMessage()
-      }, 1000);
+        let newObj = {
+          date: this.today,
+          message: this.newMessage,
+          status: 'sent'
+        }
+        this.contacts[this.activeIndex].messages.push(newObj);
+        this.newMessage = '';
+
+        setTimeout(() => {
+          this.receiveMessage()
+        }, 1000);
+      }
+
     },
 
-    filterContacts(search){
+    filterContacts() {
       for (let i = 0; i < this.contacts.length; i++) {
         const element = this.contacts[i];
-        if (element.name.contains = search) {
+        if (element.name.contains == this.search) {
           element.visible = true
         } else {
           element.visible = false
         }
       }
-
     }
 
-  },
-  created(){
-    
   }
 
 }).mount('#app')
