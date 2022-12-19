@@ -7,6 +7,7 @@ createApp({
       today: new Date().toLocaleString(),
       newMessage: '',
       activeIndex: 0,
+      messageIndex: 0,
       contacts: [
         {
           name: 'Michele',
@@ -218,13 +219,14 @@ createApp({
       }
     },
 
-    selectedMessage(messageIndex) {
-      console.log(messageIndex)
+    selectedMessage(index) {
+      this.messageIndex = index
+      console.log(this.messageIndex)
 
     },
 
-    deleteMessage(messageIndex) {
-      this.contacts[messageIndex].messages.splice(messageIndex, 1)
+    deleteMessage() {
+      this.contacts[this.activeIndex].messages.splice(this.messageIndex, 1)
     },
 
 
