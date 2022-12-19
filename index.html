@@ -87,7 +87,7 @@
                         :class="(index === activeIndex) ? 'my_display' : 'd-none'"
                       >
                         <img :src=`./img/avatar${contact.avatar}.jpg`
-                        :alt="contact.name"> {{ contact.name }}
+                        :alt="contact.name"> {{ contact.name }} {{ contact.messages.date }} 
                       </div>
                       <div class="icons-messages d-flex justify-content-around">
                         <i class="fa-solid fa-magnifying-glass fa-2x p-2"></i>

@@ -221,7 +221,6 @@ createApp({
 
     selectedMessage(index) {
       this.messageIndex = index
-      console.log(this.messageIndex)
 
     },
 
