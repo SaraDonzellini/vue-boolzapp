@@ -218,9 +218,16 @@ createApp({
       }
     },
 
-    deleteMessage(){
-      this.contacts[this.activeIndex].messages.splice(this.message, 1)
-    }
+    selectedMessage(messageIndex) {
+      console.log(messageIndex)
+
+    },
+
+    deleteMessage(messageIndex) {
+      this.contacts[messageIndex].messages.splice(messageIndex, 1)
+    },
+
+
 
   }
 
