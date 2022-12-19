@@ -8,6 +8,7 @@ createApp({
       newMessage: '',
       activeIndex: 0,
       messageIndex: 0,
+      dateIndex: 0,
       contacts: [
         {
           name: 'Michele',
